@@ -18,7 +18,7 @@ impl Task {
             operation: Box::pin(future),
         }
     }
-    fn poll(&mut self, ctx: &mut Context) -> Poll<()> {
+    pub fn poll(&mut self, ctx: &mut Context) -> Poll<()> {
         self.operation.as_mut().poll(ctx)
     }
 }
