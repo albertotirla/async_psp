@@ -1,4 +1,6 @@
 #![cfg_attr(not(test), no_std)]
+pub mod task;
+
 #[cfg(not(test))]
 extern crate alloc;
 
