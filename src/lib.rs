@@ -1,3 +1,8 @@
+#![cfg_attr(not(test), no_std)]
+#[cfg(not(test))]
+extern crate alloc;
+
+/* 
 #[cfg(test)]
 mod tests {
     #[test]
@@ -6,3 +11,4 @@ mod tests {
         assert_eq!(result, 4);
     }
 }
+*/
