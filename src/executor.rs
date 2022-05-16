@@ -33,6 +33,9 @@ impl Executor {
         }
     }
     pub fn spawn(&mut self, task: Task) {
-        self.task_queue.push_back(task)
+        self.task_queue.push_back(task);
+    }
+    pub async fn spawn_async(&mut self, task: Task) {
+        self.task_queue.push_back(task);
     }
 }
